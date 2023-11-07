@@ -139,15 +139,3 @@ void circle(int input) {
     }
     cout << "\n\nNote: The larger the circle the more accurate it is.";
 }
-    
-
-
-
-
-
-
-
-
-
-
-
