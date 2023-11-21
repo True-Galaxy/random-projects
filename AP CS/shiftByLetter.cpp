@@ -1,24 +1,21 @@
-// This code ended up getting me a little light-up octopus, and a floppy disk. Total time spent: 23 minutes.
-
-//libraries/namespace
 #include <iostream>
 #include <string>
 using namespace std;
 
-//forward declarations
-string cipher(string userin, string key);
+string cipher(string userin, string key); //forward declarations
 unsigned char shiftletter (unsigned char i, int shift);
 unsigned char uppercase(char i);
 
+/*    MAIN    MAIN    MAIN    MAIN    MAIN    MAIN    MAIN    MAIN    MAIN    MAIN    MAIN    MAIN    */
 int main()
 {
     string userin, key;
-    cout << "Enter a word or phrase to be shifted: "; getline(cin, userin);
-    cout << "\nEnter a key to shift by: "; cin >> key;
-    cout << endl << cipher(userin, key);
-    return 0;
+    cout << "Enter a word or phrase to be shifted: "; getline(cin, userin); //gather user phrase
+    cout << "\nEnter a key to shift by: "; cin >> key; //gather shift key
+    cout << endl << cipher(userin, key); //perform cipher and output result
 }
-//function defs
+/*    /MAIN    /MAIN    /MAIN    /MAIN    /MAIN    /MAIN    /MAIN    /MAIN    /MAIN    /MAIN    /MAIN */
+
 string cipher(string userin, string key) {
     string output; int count = 0;
     for (char i : userin) {
@@ -36,7 +33,7 @@ unsigned char shiftletter (unsigned char i, int shift) {
     shift = uppercase(shift) - 64; //convert letter to position in the alphabet
     if (i >= 65 && i <= 90) { // uppercase case
         i += shift;
-        if (i > 90) { //wraparound
+        if (i > 90) {
             i = 64 + (i - 90);
         }
     }
@@ -48,7 +45,7 @@ unsigned char shiftletter (unsigned char i, int shift) {
     }
     return i;
 }
-unsigned char uppercase(char i) { //make whatever is inputted uppercase
+unsigned char uppercase(char i) { //function to convert letter to uppercase. Lowercase not needed.
     if (i > 95) {
         i -= 32;
     }
