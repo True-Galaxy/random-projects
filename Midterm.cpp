@@ -1,2 +1,0 @@
-//Midterm will not be commited & pushed until the deadline is passed to avoid cheating
-// This is primarily due to the nature of my project, parts being very similar or functions being copyable for common ideas.
