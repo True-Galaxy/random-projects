@@ -27,7 +27,7 @@ int dropcheck(int input, int dimension, short int board[6][7][4]) { //Checks for
             return i;
         }
     }
-    cout << "\nInvalid selction. \n\nYour turn has been skipped.";
+    cout << "\nInvalid selection. \n\nYour turn has been skipped.";
     return -1;
 }
 
@@ -53,7 +53,7 @@ void printgrid(short int board[6][7][4]) {
                         cout << " O "; break;
                     case 3: // P1/P2 win
                         cout << " # "; break;
-                    default: //Any value other than 0-3 should never exist, otherwise the program is immidiately stopped.
+                    default: //Any value other than 0-3 should never exist, otherwise the program is immediately stopped.
                         cout << "Array error detected.";
                         throw range_error("Game Board Value Error Detected.");
                 }
